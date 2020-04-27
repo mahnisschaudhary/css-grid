@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Css positioning</title>
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.container {
+				width: 700px;
+				background-color: white;
+				margin-left: 30px;
+				height: 400px;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: 1fr 1fr;
+				grid-row-gap: 40px;
+				grid-column-gap: 50px;
+			}
+			.item1 {
+				background-color: sienna;
+				/*grid-row-start: 2;
+				grid-row-end: 3;
+				grid-column-start: 3;
+				grid-column-end: 4;*/
+				grid-row: 2/3;
+				grid-column: 3/4;
+			}
+			.item2 {
+				background-color: skyblue;
+			}
+			.item3 {
+				background-color: steelblue;
+			}
+			.item4 {
+				background-color: slateblue;
+			}
+			.item5 {
+				background-color: lightseagreen;
+			}
+			.item6 {
+				background-color: rebeccapurple;
+				grid-row-start: 1;
+				grid-row-end: 2;
+				grid-column-start: 1;
+				grid-column-end: 2;
+				/*shorthand  grid-area:rowstart/columnstart/rowend/columnend*/
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Css positioning of items</h1>
+		<div class="container">
+			<div class="items item1">First</div>
+			<div class="items item2">Second</div>
+			<div class="items item3">Third</div>
+			<div class="items item4">four</div>
+			<div class="items item5">fifth</div>
+			<div class="items item6">sixth</div>
+		</div>
+	</body>
+</html>

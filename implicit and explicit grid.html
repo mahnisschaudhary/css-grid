@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>implicit and explicit</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .container{
+            background-color:grey;
+            width:80%;
+            display:grid;
+            grid-template-columns:repeat(2,300px);
+            grid-template-rows:repeat(2,150px);
+            grid-gap:10px;
+            /* grid auto rows helps to add new div element and set the width and height automatically i.e. implicitly ..if new div element are added from server or if new data are retreived from server then grid implicit and explicit helps to set width and height automatically */
+            grid-auto-rows:90px;
+            grid-auto-flow:column;
+            grid-auto-columns:200px;
+
+        }
+        .item1{background-color:mediumvioletred;}
+        .item2{
+            background-color:midnightblue;
+        }
+        .item3{background-color:orange;}
+        .item4{background-color:orangered;}
+        .item5{background-color:orchid;}
+        .item6{background-color:olive;}
+        .item7{background-color:palevioletred;}
+        .item8{background-color:peru;}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="items item1">one</div>
+        <div class="items item2">two</div>
+        <div class="items item3">three</div>
+        <div class="items item4">four</div>
+        <div class="items item5">five</div>
+        <div class="items item6">six</div>
+        <div class="items item7">seven</div>
+        <div class="items item8">eight</div>
+    </div>
+</body>
+</html>

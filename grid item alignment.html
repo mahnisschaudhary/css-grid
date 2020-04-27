@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid item alignment</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .container{
+            width:700px;
+            background-color:grey;
+            margin: 40px 0 0 200px;           
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            grid-template-rows:repeat(2,100px);
+            grid-gap:9px;
+            grid-auto-rows:50px;
+         /*    align-items:start;     it is used for vertical alignment.  its properties are start end center and stretch
+            align-items:end;
+            align-items:start; */
+            align-items:stretch;  /* by default properties */
+            justify-items:center;  /* it is used for horizontal alignment  . its properties are same as align-items;   these align itema and justify items are used inside container; */
+            /* shorthand formula: place-items:<align-items> <justify-items>
+                  place-self:<align-self> <justify-self>; */
+         }
+        .item1{background-color:olive;
+           align-self:center;}                  /* align-self and justify-slef is used inside particular div element to move any particular element to different location inside the div element */
+        .item2{background-color:rgb(157, 255, 0);
+        align-self:end;}
+        .item3{background-color:palegreen;
+                 grid-row:span 3;
+                 align-self:start;}
+        .item4{background-color:navy;}
+        .item5{background-color:peru;}
+        .item6{background-color:palevioletred;}
+        .item7{background-color:orchid;
+        grid-column:span 2;}
+        .item8{background-color:orangered;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">first</div>
+        <div class="items item2">second</div>
+        <div class="items item3">third</div>
+        <div class="items item4">fourth</div>
+        <div class="items item5">fifth</div>
+        <div class="items item6">sixth</div>
+        <div class="items item7">seventh</div>
+        <div class="items item8">eight</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>grid gap</title>
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			#container {
+				background-color: grey;
+				width: 600px;
+				margin: 20px 20px;
+				height: 400px;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: 1fr 1fr 1fr;
+				grid-row-gap: 15px;
+				grid-column-gap: 20px;
+				/*grid-gap:15px 20px;*/
+			}
+			#first {
+				background-color: orchid;
+			}
+			#second {
+				background-color: palegoldenrod;
+			}
+			#third {
+				background-color: purple;
+			}
+			#fourth {
+				background-color: plum;
+			}
+			#fifth {
+				background-color: rebeccapurple;
+			}
+			#sixth {
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>grid gap</h1>
+		<div id="container">
+			<div id="first">first</div>
+			<div id="second">second</div>
+			<div id="third">third</div>
+			<div id="fourth">fourth</div>
+			<div id="fifth">fifth</div>
+			<div id="sixth">sixth</div>
+		</div>
+	</body>
+</html>
